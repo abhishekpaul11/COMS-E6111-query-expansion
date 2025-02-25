@@ -1,24 +1,7 @@
-import requests
 import argparse
 
-
-def google_search(query, api_key, search_engine_id):
-    url = "https://www.googleapis.com/customsearch/v1"
-
-    params = {
-        'q': query,
-        'key': api_key,
-        'cx': search_engine_id,
-        'num': 10
-    }
-
-    response = requests.get(url, params=params)
-
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Error: {response.status_code}")
-        return None
+from google_search import google_search
+from rocchio import rocchio_algorithm, update_query
 
 
 if __name__ == "__main__":
@@ -41,45 +24,64 @@ if __name__ == "__main__":
     print(f"Precision   = {args.precision}")
     print()
 
-    results = google_search(args.query, args.api_key, args.search_engine_id)
+    current_query = args.query
+    achieved_precision = 0.0
+    iteration = 0
 
-    relevance_feedback = []
-    relevant_count = 0
-    total_results = 0
+    while achieved_precision < args.precision:
+        results = google_search(current_query, args.api_key, args.search_engine_id)
+        relevance_feedback = []
+        relevant_count = 0
+        total_results = 0
+        iteration += 1
 
-    if results:
-        filtered_results = [item for item in results.get('items', []) if 'fileFormat' not in item]
-        total_results = len(filtered_results)
+        if results:
+            filtered_results = [item for item in results.get('items', []) if 'fileFormat' not in item]
+            total_results = len(filtered_results)
 
-        if total_results < 10:
-            print("Terminating program as fewer than 10 results returned by Google.")
-            exit(0)
+            if total_results < 10:
+                print("Terminating program as fewer than 10 results returned by Google.")
+                exit(0)
 
-        print("Google Search Results:")
-        print("======================")
+            print(f"Google Search Results (Iteration {iteration}):")
+            print("======================")
 
-        for idx, item in enumerate(filtered_results, start=1):
-            print(f"\nResult {idx}")
-            print("[")
-            print(f" URL: {item['link']}")
-            print(f" Title: {item['title']}")
-            print(f" Summary: {item['snippet']}")
-            print("]")
-            relevant = input("\nRelevant (Y/N)? ").strip().lower()
-            is_relevant = relevant == 'y'
-            relevance_feedback.append((item['link'], is_relevant))
-            if is_relevant:
-                relevant_count += 1
+            for idx, item in enumerate(filtered_results, start=1):
+                print(f"\nResult {idx}")
+                print("[")
+                print(f" URL: {item['link'] if 'link' in item else 'NA'}")
+                print(f" Title: {item['title'] if 'title' in item else 'NA'}")
+                print(f" Summary: {item['snippet'] if 'snippet' in item else 'NA'}")
+                print("]")
+                relevant = input("\nRelevant (Y/N)? ").strip().lower()
+                is_relevant = relevant == 'y'
+                relevance_feedback.append((item['link'], is_relevant, item['snippet']))
+                if is_relevant:
+                    relevant_count += 1
 
-    achieved_precision = relevant_count / total_results if total_results > 0 else 0
+        achieved_precision = relevant_count / total_results if total_results > 0 else 0
 
-    print("\nFEEDBACK SUMMARY")
-    print("======================\n")
-    print(f"Query       = {args.query}")
-    print(f"Precision   = {achieved_precision:.1f}")
-    print()
+        print("\nFEEDBACK SUMMARY")
+        print("======================\n")
+        print(f"Query       = {current_query}")
+        print(f"Precision   = {achieved_precision:.1f}")
+        print()
 
-    if achieved_precision < args.precision:
-        print(f"Still below the desired precision of {args.precision}")
-    else:
-        print("Desired precision reached, done")
+        if achieved_precision == 0.0:
+            print("Below desired precision, but can no longer augment the query.\n")
+            break
+        elif achieved_precision < args.precision:
+            print(f"Still below the desired precision of {args.precision}")
+            relevant_docs = [doc[2] for doc in relevance_feedback if doc[1]]
+            non_relevant_docs = [doc[2] for doc in relevance_feedback if not doc[1]]
+
+            # values of constants taken from https://nlp.stanford.edu/IR-book/pdf/09expand.pdf
+            query_vector, terms = rocchio_algorithm(current_query, relevant_docs, non_relevant_docs,
+                                                    alpha=1, beta=0.75, gamma=0.15)
+
+            # add only two new query terms per iteration
+            current_query = update_query(current_query, query_vector, terms, top_n=2)
+            print(f"Updating query to: {current_query}\n")
+        else:
+            print("Desired precision reached, done\n")
+            break
