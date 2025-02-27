@@ -32,15 +32,16 @@ if __name__ == "__main__":
         results = google_search(current_query, args.api_key, args.search_engine_id)
         relevance_feedback = []
         relevant_count = 0
-        total_results = 0
+        total_filtered_results = 0
         iteration += 1
 
         if results:
             filtered_results = [item for item in results.get('items', []) if 'fileFormat' not in item]
-            total_results = len(filtered_results)
+            total_filtered_results = len(filtered_results)
 
-            if total_results < 10:
-                print("Terminating program as fewer than 10 results returned by Google.")
+
+            if len(results.get('items', [])) < 10 and iteration == 1:
+                print("Terminating program as fewer than 10 results returned by Google.\n")
                 exit(0)
 
             print(f"Google Search Results (Iteration {iteration}):")
@@ -55,11 +56,16 @@ if __name__ == "__main__":
                 print("]")
                 relevant = input("\nRelevant (Y/N)? ").strip().lower()
                 is_relevant = relevant == 'y'
-                relevance_feedback.append((item['link'], is_relevant, item['snippet']))
+
+                link = item['link'] if 'link' in item else ''
+                title = item['title'] if 'title' in item else ''
+                snippet = item['snippet'] if 'snippet' in item else ''
+
+                relevance_feedback.append((link, is_relevant, snippet))
                 if is_relevant:
                     relevant_count += 1
 
-        achieved_precision = relevant_count / total_results if total_results > 0 else 0
+        achieved_precision = relevant_count / total_filtered_results if total_filtered_results > 0 else 0
 
         print("\nFEEDBACK SUMMARY")
         print("======================\n")
@@ -67,7 +73,7 @@ if __name__ == "__main__":
         print(f"Precision   = {achieved_precision:.1f}")
         print()
 
-        if achieved_precision == 0.0:
+        if achieved_precision <= 0.0:
             print("Below desired precision, but can no longer augment the query.\n")
             break
         elif achieved_precision < args.precision:
