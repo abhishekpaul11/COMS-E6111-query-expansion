@@ -6,18 +6,18 @@ An Information Retrieval system based on the Google Custom Search API which disa
 2. Puja Singla (ps3467)
 
 ## Files submitted
-1. Transcripts /  --> Folder that contains all the transcript text files for the 3 given test cases
-   1. milky_way.txt --> Transcript for query "milky way" (intended result is Milky Way Chocolate Bar)
-   2. per_se.txt  --> Transcript for query "per se" (intended result is Per Se Michelin Star Restaurant in NYC)
-   3. wojcicki.txt  --> Transcript for query "wojcicki" (intended result is Anne Wojcicki, co-founder of 23andMe)
-2. .gitignore --> gitignore file for python projects
-3. google_search.py --> sub-routine for performing the google search
-4. LICENSE --> MIT License
-5. main.py --> the main entry point of the application
-6. README.md --> Project Readme file
-7. requirements.txt --> list of dependencies and external libraries used
-8. rocchio.py --> sub-routine for implementing Rocchio's algorithm for query expansion
-9. stop-words.txt --> list of all stop-words in the english language
+1. [Transcripts](/transcripts) /  --> Folder that contains all the transcript text files for the 3 given test cases
+   1. [milky_way.txt](/transcripts/milky_way.txt) --> Transcript for query "milky way" (intended result is Milky Way Chocolate Bar)
+   2. [per_se.txt](/transcripts/per_se.txt)  --> Transcript for query "per se" (intended result is Per Se Michelin Star Restaurant in NYC)
+   3. [wojcicki.txt](/transcripts/wojcicki.txt)  --> Transcript for query "wojcicki" (intended result is Anne Wojcicki, co-founder of 23andMe)
+2. [.gitignore](.gitignore) --> gitignore file for python projects
+3. [google_search.py](google_search.py) --> sub-routine for performing the google search
+4. [LICENSE](LICENSE) --> MIT License
+5. [main.py](main.py) --> the main entry point of the application
+6. [README.md](README.md) --> Project Readme file
+7. [requirements.txt](requirements.txt) --> list of dependencies and external libraries used
+8. [rocchio.py](rocchio.py) --> sub-routine for implementing Rocchio's algorithm for query expansion
+9. [stop-words.txt](stop-words.txt) --> list of all stop-words in the english language
 
 ## Installation and Execution
 
