@@ -22,6 +22,10 @@ def transform_query(query, vectorizer):
 
 
 def rocchio_algorithm(query, relevant_docs, non_relevant_docs, alpha=1, beta=0.75, gamma=0.15):
+    query = query.lower()
+    relevant_docs = [doc.lower() for doc in relevant_docs]
+    non_relevant_docs = [doc.lower() for doc in non_relevant_docs]
+
     terms, tfidf_matrix, vectorizer = extract_terms(relevant_docs + non_relevant_docs)
 
     relevant_matrix = tfidf_matrix[:len(relevant_docs)]
@@ -41,8 +45,13 @@ def update_query(original_query, query_vector, terms, top_n=2):
 
     # retaining the order of tokens in the original query
     original_query_terms = original_query.lower().split()
-    original_query_terms_score = np.mean(
-        [query_weights[terms.tolist().index(term)] for term in original_query_terms if term in terms])
+    original_query_scores = [query_weights[terms.tolist().index(term)] for term in original_query_terms if
+                             term in terms]
+
+    if len(original_query_scores) > 0:
+        original_query_terms_score = np.mean(original_query_scores)
+    else:
+        original_query_terms_score = 0
 
     new_terms_indices = [
                             i for i in np.argsort(query_weights)[::-1]
