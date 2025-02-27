@@ -47,7 +47,7 @@ if __name__ == "__main__":
             print(f"Google Search Results (Iteration {iteration}):")
             print("======================")
 
-            for idx, item in enumerate(filtered_results, start=1):
+            for idx, item in enumerate(results.get('items', []), start=1):
                 print(f"\nResult {idx}")
                 print("[")
                 print(f" URL: {item['link'] if 'link' in item else 'NA'}")
@@ -61,9 +61,11 @@ if __name__ == "__main__":
                 title = item['title'] if 'title' in item else ''
                 snippet = item['snippet'] if 'snippet' in item else ''
 
-                relevance_feedback.append((link, is_relevant, snippet))
-                if is_relevant:
-                    relevant_count += 1
+                # Ignoring all non-html files
+                if 'fileFormat' not in item:
+                    relevance_feedback.append((link, is_relevant, snippet))
+                    if is_relevant:
+                        relevant_count += 1
 
         achieved_precision = relevant_count / total_filtered_results if total_filtered_results > 0 else 0
 
