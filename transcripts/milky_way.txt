@@ -1,0 +1,211 @@
+(venv) abhishekpaul@Mac COMS-E6111-query-expansion % python3 main.py AIzaSyAoO2ShS96E0SUS8gs7r4q907iZL8fzEQ4 01fe29cf6df6d48b2 0.9 "milky way"
+
+Parameters:
+
+Client key  = AIzaSyAoO2ShS96E0SUS8gs7r4q907iZL8fzEQ4
+Engine key  = 01fe29cf6df6d48b2
+Query       = milky way
+Precision   = 0.9
+
+Google Search Results (Iteration 1):
+======================
+
+Result 1
+[
+ URL: https://en.wikipedia.org/wiki/Milky_Way
+ Title: Milky Way - Wikipedia
+ Summary: The Milky Way is a barred spiral galaxy with a D25 isophotal diameter estimated at 26.8 ± 1.1 kiloparsecs (87,400 ± 3,600 light-years), but only about 1,000 ...
+]
+
+Relevant (Y/N)? N
+
+Result 2
+[
+ URL: https://www.milkywaybar.com/
+ Title: Explore MILKY WAY® Official Website | Chocolate Bars
+ Summary: Explore MILKY WAY® Bar products and nutrition information, fun facts about the oh so stretchy caramel chocolate bar, social media channels, and much more!
+]
+
+Relevant (Y/N)? Y
+
+Result 3
+[
+ URL: https://www.milkywayla.com/
+ Title: Milky Way LA Restaurant Los Angeles
+ Summary: Opened in 1977 by Bernie & Leah (Spielberg) Adler, The Milky Way is a storied, family-owned restaurant located in the heart of the Pico-Robertson ...
+]
+
+Relevant (Y/N)? N
+
+Result 4
+[
+ URL: https://science.nasa.gov/resource/the-milky-way-galaxy/
+ Title: The Milky Way Galaxy - NASA Science
+ Summary: Nov 8, 2017 ... The Milky Way's elegant spiral structure is dominated by just two arms wrapping off the ends of a central bar of stars.
+]
+
+Relevant (Y/N)? N
+
+Result 5
+[
+ URL: https://www.space.com/19915-milky-way-galaxy.html
+ Title: Milky Way galaxy: Facts about our cosmic neighborhood | Space
+ Summary: Apr 18, 2023 ... Everything else in the galaxy revolves around this powerful gateway to nothingness. In its immediate surroundings is a tightly packed region of ...
+]
+
+Relevant (Y/N)? N
+
+Result 6
+[
+ URL: https://imagine.gsfc.nasa.gov/science/objects/milkyway1.html
+ Title: NASA - The Milky Way Galaxy
+ Summary: The Milky Way is a large barred spiral galaxy. All the stars we see in the night sky are in our own Milky Way Galaxy.
+]
+
+Relevant (Y/N)? N
+
+Result 7
+[
+ URL: https://www.amnh.org/explore/ology/astronomy/the-milky-way-galaxy2
+ Title: The Milky Way Galaxy | AMNH
+ Summary: The Milky Way is a huge collection of stars, dust and gas. It's called a spiral galaxy because if you could view it from the top or bottom, it would look like a ...
+]
+
+Relevant (Y/N)? N
+
+Result 8
+[
+ URL: https://www.milkywaypgh.com/
+ Title: Milky Way Pittsburgh
+ Summary: Here at Milky Way, we pride ourselves on offering delicious Kosher alternatives to the essential pizzeria foods normally sold in a standard pizzeria.
+]
+
+Relevant (Y/N)? N
+
+Result 9
+[
+ URL: https://www.nasa.gov/image-article/milky-way-on-the-horizon/
+ Title: Milky Way on the Horizon - NASA
+ Summary: 21 hours ago ... NASA astronaut Don Pettit used a camera with low light and long duration settings to capture this Jan. 29, 2025, image of the Milky Way ...
+]
+
+Relevant (Y/N)? N
+
+Result 10
+[
+ URL: https://rowstercoffee.com/products/milky-way
+ Title: Milky Way – Rowster Coffee
+ Summary: Roast Level: Medium - Dark Tasting Notes: Rich, Walnut, Sweet Description: Our flagship blend, showcases our range of roast profiles and ability to source ...
+]
+
+Relevant (Y/N)? N
+
+FEEDBACK SUMMARY
+======================
+
+Query       = milky way
+Precision   = 0.1
+
+Still below the desired precision of 0.9
+Updating query to: milky way bar facts
+
+Google Search Results (Iteration 2):
+======================
+
+Result 1
+[
+ URL: https://www.milkywaybar.com/our-story
+ Title: Facts About MILKY WAY® | Chocolate candy bar
+ Summary: When were MILKY WAY® bars created? How do we have an out of this world combination of caramel, chocolate, and nougat? Right this way for all things MILKY ...
+]
+
+Relevant (Y/N)? Y
+
+Result 2
+[
+ URL: https://www.mentalfloss.com/article/70206/10-gooey-facts-about-milky-way-bars
+ Title: 10 Gooey Facts About Milky Way Bars
+ Summary: Apr 11, 2016 ... The Milky Way bar is actually named after malted milk, a popular drink around the time it was first released, in 1923.
+]
+
+Relevant (Y/N)? Y
+
+Result 3
+[
+ URL: https://en.wikipedia.org/wiki/Milky_Way_(chocolate_bar)
+ Title: Milky Way (chocolate bar) - Wikipedia
+ Summary: Milky Way is a brand of chocolate-covered confectionery bar manufactured and marketed by Mars Inc.. There are two varieties: the U.S. Milky Way bar, ...
+]
+
+Relevant (Y/N)? Y
+
+Result 4
+[
+ URL: https://www.milkywaybar.com/products/chocolate/milky-way-milk-chocolate-single-candy-bar-184-oz-bars
+ Title: MILKY WAY Milk Chocolate Single Candy Bar, 1.84 oz | MILKY WAY®
+ Summary: INGREDIENTS: Milk Chocolate (Sugar, Cocoa Butter, Skim Milk, Chocolate, Lactose, Milkfat, Soy Lecithin), Corn Syrup, Sugar, Palm Oil, Skim Milk; Less Than 2 ...
+]
+
+Relevant (Y/N)? Y
+
+Result 5
+[
+ URL: https://kids.kiddle.co/Milky_Way_(chocolate_bar)
+ Title: Milky Way (chocolate bar) Facts for Kids
+ Summary: Oct 16, 2023 ... Milky Way (chocolate bar) facts for kids ... Milky Way is a chocolate bar. It was made in 1923. It is covered in chocolate and caramel. It is best ...
+]
+
+Relevant (Y/N)? Y
+
+Result 6
+[
+ URL: https://www.backthenhistory.com/articles/the-history-of-milky-way-bars-2
+ Title: The History of Milky Way Bars
+ Summary: Oct 22, 2023 ... Milky Way bars were created by Frank Mars along with his son. However, his son Forrest claimed throughout his life that the idea was his own.
+]
+
+Relevant (Y/N)? Y
+
+Result 7
+[
+ URL: https://www.farmersallnatural.com/post/interesting-facts-about-the-milky-way-candy-bar
+ Title: Interesting facts about the Milky Way candy bar...
+ Summary: The name 'Milky Way' was taken from a popular malted milkshake NOT the galaxy.
+]
+
+Relevant (Y/N)? Y
+
+Result 8
+[
+ URL: https://www.snackhistory.com/milky-way-candy/
+ Title: Milky Way Candy (History, Pictures & Commercials) - Snack History
+ Summary: Aug 20, 2021 ... The Milky Way bar was introduced in the year 1924, and by 1926 there were two versions available. Both chocolate nougat with milk chocolate ...
+]
+
+Relevant (Y/N)? Y
+
+Result 9
+[
+ URL: https://www.nutritionvalue.org/MILKY_WAY_Bar_91726130_nutritional_value.html
+ Title: MILKY WAY Bar nutrition facts and analysis.
+ Summary: MILKY WAY Bar contains 105 calories per 23 g serving. This serving contains 4 g of fat, 0.9 g of protein and 16 g of carbohydrate. The latter is 14 g sugar and ...
+]
+
+Relevant (Y/N)? Y
+
+Result 10
+[
+ URL: https://www.reddit.com/r/todayilearned/comments/odz5j/til_that_the_milky_way_barcandy_in_the_usa_is/
+ Title: TIL that the Milky Way bar(Candy) in the USA is actually the Mars ...
+ Summary: Jan 12, 2012 ... ihatecoffee. • 13y ago. Additionally, it would appear that the UK Milky way is, in fact, the US 3 Musketeers bar. Upvote 23. Downvote Reply ...
+]
+
+Relevant (Y/N)? Y
+
+FEEDBACK SUMMARY
+======================
+
+Query       = milky way bar facts
+Precision   = 1.0
+
+Desired precision reached, done

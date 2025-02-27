@@ -1,0 +1,211 @@
+(venv) abhishekpaul@Mac COMS-E6111-query-expansion % python3 main.py AIzaSyAoO2ShS96E0SUS8gs7r4q907iZL8fzEQ4 01fe29cf6df6d48b2 0.9 "per se"
+
+Parameters:
+
+Client key  = AIzaSyAoO2ShS96E0SUS8gs7r4q907iZL8fzEQ4
+Engine key  = 01fe29cf6df6d48b2
+Query       = per se
+Precision   = 0.9
+
+Google Search Results (Iteration 1):
+======================
+
+Result 1
+[
+ URL: https://www.thomaskeller.com/perseny
+ Title: Per Se | Thomas Keller Restaurant Group
+ Summary: Per Se. Per Se Front Door. center. Michelin; Les Grandes; Relias. About. About; Restaurant · Team · Info & Directions · Gift Experiences · Reservations; Menus & ...
+]
+
+Relevant (Y/N)? Y
+
+Result 2
+[
+ URL: https://www.merriam-webster.com/dictionary/perse
+ Title: PERSE Definition & Meaning - Merriam-Webster
+ Summary: The meaning of PERSE is of a dark grayish blue resembling indigo. How to use perse in a sentence. Did you know?
+]
+
+Relevant (Y/N)? N
+
+Result 3
+[
+ URL: https://www.thomaskeller.com/new-york-new-york/per-se/todays-menus
+ Title: Today's Menus | Thomas Keller Restaurant Group
+ Summary: Per Se. Daily Menus. Two tasting menus are offered daily: a nine-course chef's tasting menu, as well as a ... Per Se . Complete your gift to make an impact.
+]
+
+Relevant (Y/N)? Y
+
+Result 4
+[
+ URL: https://www.reddit.com/r/grammar/comments/otxmm7/how_does_one_use_per_se/
+ Title: How does one use 'per se'? : r/grammar
+ Summary: Jul 29, 2021 ... Comments Section ... It roughly means "by itself”, “in itself” or “of itself” and is often used with a negative statement followed by a but to ...
+]
+
+Relevant (Y/N)? N
+
+Result 5
+[
+ URL: https://en.wikipedia.org/wiki/Per_se
+ Title: Per se - Wikipedia
+ Summary: a primary topic, and an article needs to be written about it. It is believed to qualify as a broad-concept article.
+]
+
+Relevant (Y/N)? N
+
+Result 6
+[
+ URL: https://www.nytimes.com/2004/09/08/dining/the-magic-of-napa-with-urban-polish.html
+ Title: The Magic of Napa With Urban Polish - The New York Times
+ Summary: Sep 8, 2004 ... Frank Bruni reviews Per Se, Thomas Keller's restaurant at Time Warner Center; photos (L)
+]
+
+Relevant (Y/N)? Y
+
+Result 7
+[
+ URL: https://www.instagram.com/perseny/?hl=en
+ Title: Per Se (@perseny) • Instagram photos and videos
+ Summary: 283K Followers, 202 Following, 1020 Posts - Per Se (@perseny) on Instagram: "Chef Thomas Keller's 3-Star Michelin restaurant overlooking Columbus Circle ...
+]
+
+Relevant (Y/N)? Y
+
+Result 8
+[
+ URL: https://www.jamesperse.com/
+ Title: James Perse Los Angeles
+ Summary: James Perse. Women. Women; Apparel. Apparel Main Menu; New Arrivals · At Home Essentials · Classics · Dresses/Jumpsuits · Sweaters/Cashmere · T-shirts.
+]
+
+Relevant (Y/N)? N
+
+Result 9
+[
+ URL: https://readable.com/blog/how-to-correctly-use-per-se/
+ Title: Per se meaning, how to use per se in a sentence | Readable ...
+ Summary: Aug 11, 2017 ... 'Per se' is a Latin term which literally means, “by itself”, “in itself” or “of itself”. This means you're taking something out of its context to describe it ...
+]
+
+Relevant (Y/N)? N
+
+Result 10
+[
+ URL: https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/per-se
+ Title: Per Se – New York - a MICHELIN Guide Restaurant
+ Summary: Per Se – a Three Stars: Exceptional cuisine restaurant in the 2024 MICHELIN Guide USA. The MICHELIN inspectors' point of view, information on prices, ...
+]
+
+Relevant (Y/N)? Y
+
+FEEDBACK SUMMARY
+======================
+
+Query       = per se
+Precision   = 0.5
+
+Still below the desired precision of 0.9
+Updating query to: michelin restaurant per se
+
+Google Search Results (Iteration 2):
+======================
+
+Result 1
+[
+ URL: https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/per-se
+ Title: Per Se – New York - a MICHELIN Guide Restaurant
+ Summary: Per Se – a Three Stars: Exceptional cuisine restaurant in the 2024 MICHELIN Guide USA. The MICHELIN inspectors' point of view, information on prices, ...
+]
+
+Relevant (Y/N)? Y
+
+Result 2
+[
+ URL: https://www.thomaskeller.com/perseny
+ Title: Per Se | Thomas Keller Restaurant Group
+ Summary: Restaurant · Team · Info & Directions · Gift Experiences · Reservations; Menus ... Per Se. Per Se Front Door. center. Michelin; Les Grandes; Relias. About. About
+]
+
+Relevant (Y/N)? Y
+
+Result 3
+[
+ URL: https://en.wikipedia.org/wiki/Per_Se_(restaurant)
+ Title: Per Se (restaurant) - Wikipedia
+ Summary: It is owned by chef Thomas Keller, and the Chef de Cuisine is Chad Palagi. Per Se has maintained three Michelin stars since the introduction of the New York ...
+]
+
+Relevant (Y/N)? Y
+
+Result 4
+[
+ URL: https://www.thomaskeller.com/new-york-new-york/per-se/restaurant
+ Title: Opened in 2004, Per Se is Thomas Keller's acclaimed New York ...
+ Summary: Restaurant Opened in 2004, Per Se is Thomas Keller's acclaimed New ... restaurant is Chef Keller's second three-Michelin-starred property featuring his.
+]
+
+Relevant (Y/N)? Y
+
+Result 5
+[
+ URL: https://ny.eater.com/2024/9/20/24249991/per-se-is-closed-temporarily-new-york-restaurant
+ Title: Three-Michelin Starred Per Se Is Temporarily Closed
+ Summary: Sep 20, 2024 ... Thomas Keller's three-Michelin-starred Per Se, the New York tasting menu restaurant in Columbus Circle that celebrated its 20th anniversary in February, is ...
+]
+
+Relevant (Y/N)? Y
+
+Result 6
+[
+ URL: https://www.instagram.com/perseny/?hl=en
+ Title: Per Se (@perseny) • Instagram photos and videos
+ Summary: Chef Thomas Keller's 3-Star Michelin restaurant overlooking Columbus Circle & Central Park located in New York City.
+]
+
+Relevant (Y/N)? Y
+
+Result 7
+[
+ URL: https://www.exploretock.com/perse
+ Title: Per Se - New York, NY | Tock
+ Summary: The restaurant is Chef Keller's second three-Michelin-starred property featuring Chef's tasting menu and a vegetable tasting menu using classic French ...
+]
+
+Relevant (Y/N)? Y
+
+Result 8
+[
+ URL: https://lovefoodmore.com/per-se/
+ Title: My Stagè at 3 Starred Michelin Restaurant, Per Se - Lovefoodmore
+ Summary: Sep 28, 2019 ... If the chefs like the dish they would take the concept and turn it into a 3 Michelin star dish. This concept was rather exciting for me. It felt ...
+]
+
+Relevant (Y/N)? Y
+
+Result 9
+[
+ URL: https://www.reddit.com/r/finedining/comments/1exs0n4/per_se_nyc_flawless_experience_in_2024/
+ Title: Per Se, NYC - Flawless Experience in 2024 : r/finedining
+ Summary: Aug 21, 2024 ... ... Michelin restaurants over the years and Per Se has always been my favorite. Other places have had more interesting combos and presentation ...
+]
+
+Relevant (Y/N)? Y
+
+Result 10
+[
+ URL: https://www.cbsnews.com/newyork/news/michelin-starred-restaurant-per-se-racks-up-c-rating-from-health-department/
+ Title: Michelin-Starred Restaurant Per Se Racks Up C Rating From Health ...
+ Summary: Mar 4, 2014 ... The Michelin-starred Thomas Keller establishment got 42 violation points when it was inspected Feb. 19, city health department records ...
+]
+
+Relevant (Y/N)? Y
+
+FEEDBACK SUMMARY
+======================
+
+Query       = michelin restaurant per se
+Precision   = 1.0
+
+Desired precision reached, done

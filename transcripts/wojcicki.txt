@@ -1,0 +1,211 @@
+(venv) abhishekpaul@Mac COMS-E6111-query-expansion % python3 main.py AIzaSyAoO2ShS96E0SUS8gs7r4q907iZL8fzEQ4 01fe29cf6df6d48b2 0.9 "wojcicki"
+
+Parameters:
+
+Client key  = AIzaSyAoO2ShS96E0SUS8gs7r4q907iZL8fzEQ4
+Engine key  = 01fe29cf6df6d48b2
+Query       = wojcicki
+Precision   = 0.9
+
+Google Search Results (Iteration 1):
+======================
+
+Result 1
+[
+ URL: https://en.wikipedia.org/wiki/Susan_Wojcicki
+ Title: Susan Wojcicki - Wikipedia
+ Summary: an American business executive who was the chief executive officer of YouTube from 2014 to 2023. Her net worth was estimated at $765 million in 2022.
+]
+
+Relevant (Y/N)? N
+
+Result 2
+[
+ URL: https://www.reddit.com/r/poland/comments/3bihro/susan_wojcicki_youtube_ceo_teaches_how_to/
+ Title: Susan Wojcicki (YouTube CEO) teaches how to pronounce her ...
+ Summary: Jun 29, 2015 ... She's combining Polish and English pronunciation of her last name. She combines the "j" and "c" initially, and then provides the Polish version of "c" as "ts".
+]
+
+Relevant (Y/N)? N
+
+Result 3
+[
+ URL: https://x.com/susanwojcicki?lang=en
+ Title: Susan Wojcicki (@SusanWojcicki) / X
+ Summary: Susan Wojcicki's posts ... 's team and innovative solutions in sustainability and security to enable transparency and accountability for countries, communities ...
+]
+
+Relevant (Y/N)? N
+
+Result 4
+[
+ URL: https://www.instagram.com/susanwojcicki/?hl=en
+ Title: Susan Wojcicki (@susanwojcicki) • Instagram photos and videos
+ Summary: YouTube CEO · Photo shared by YouTube for Families on May 27, 2022 tagging @susanwojcicki. Say hello to @susanwojcicki, the CEO of @YouTube. · Photo shared by ...
+]
+
+Relevant (Y/N)? N
+
+Result 5
+[
+ URL: https://x.com/annewoj23?lang=en
+ Title: Anne Wojcicki (@annewoj23) / X
+ Summary: CEO and Co-Founder, 23andMe.
+]
+
+Relevant (Y/N)? Y
+
+Result 6
+[
+ URL: https://blog.youtube/inside-youtube/a-personal-update-from-susan/
+ Title: A personal update from Susan - YouTube Blog
+ Summary: A personal update from Susan. By Susan Wojcicki. Feb 16, 2023 – 3 minute read. Copy link. A personal update from Susan on stepping back from her role as CEO ...
+]
+
+Relevant (Y/N)? N
+
+Result 7
+[
+ URL: https://www.instagram.com/heywoj/?hl=en
+ Title: Esther Wojcicki (@heywoj) • Instagram photos and videos
+ Summary: 8216 Followers, 1802 Following, 2042 Posts - Esther Wojcicki (@heywoj) on Instagram: " Author of How to Raise Successful People, Chief Education Advisor ...
+]
+
+Relevant (Y/N)? N
+
+Result 8
+[
+ URL: https://www.facebook.com/esther.wojcicki/posts/it-is-with-soul-crushing-grief-that-i-announce-the-passing-of-my-daughter-susan-/10162259101335763/
+ Title: Esther Wojcicki - It is with soul crushing grief that I... | Facebook
+ Summary: Aug 10, 2024 ... It is with soul crushing grief that I announce the passing of my daughter Susan. I am eternally grateful she was in my life.
+]
+
+Relevant (Y/N)? N
+
+Result 9
+[
+ URL: https://www.linkedin.com/in/ed-wojcicki-bb02abb
+ Title: Ed Wojcicki - Retired... but Consulting and Writing - Retired | LinkedIn
+ Summary: Steven Berry. “Ed Wojcicki is a keen listener and intelligent articulator of current circumstances and situations. His ability to discern needs and respond ...
+]
+
+Relevant (Y/N)? N
+
+Result 10
+[
+ URL: https://physics.stanford.edu/news/professor-stanley-wojcicki-has-died-age-86
+ Title: Professor Stanley Wojcicki has died at age 86 | Physics Department
+ Summary: Jun 5, 2023 ... Stanley G. Wojcicki died on May 31, 2023, at his condo in Los Altos at age 86. He still maintained his home on the Stanford campus.
+]
+
+Relevant (Y/N)? N
+
+FEEDBACK SUMMARY
+======================
+
+Query       = wojcicki
+Precision   = 0.1
+
+Still below the desired precision of 0.9
+Updating query to: wojcicki founder 23andme
+
+Google Search Results (Iteration 2):
+======================
+
+Result 1
+[
+ URL: https://investors.23andme.com/management/anne-wojcicki
+ Title: Anne Wojcicki | Board Member,Management | 23andMe, Inc.
+ Summary: Anne co-founded 23andMe in 2006, three years after the first human genome was sequenced. Her goal was audacious: to help people access, understand, and benefit ...
+]
+
+Relevant (Y/N)? Y
+
+Result 2
+[
+ URL: https://en.wikipedia.org/wiki/Anne_Wojcicki
+ Title: Anne Wojcicki - Wikipedia
+ Summary: Anne E. Wojcicki is an American entrepreneur who co-founded and is CEO of the personal genomics company 23andMe. She founded the company in 2006 with Linda ...
+]
+
+Relevant (Y/N)? Y
+
+Result 3
+[
+ URL: https://x.com/annewoj23?lang=en
+ Title: Anne Wojcicki (@annewoj23) / X
+ Summary: CEO and Co-Founder, 23andMe.
+]
+
+Relevant (Y/N)? Y
+
+Result 4
+[
+ URL: https://articles.sequoiacap.com/2018-12-12-anne-wojcicki
+ Title: Seven Questions with Anne Wojcicki
+ Summary: Dec 12, 2018 ... Anne Wojcicki is co-founder and CEO of 23andMe, a direct-to-consumer genetic testing company with more than 5 million customers around the world.
+]
+
+Relevant (Y/N)? Y
+
+Result 5
+[
+ URL: https://www.linkedin.com/in/annewojcicki
+ Title: Anne Wojcicki - 23andMe | LinkedIn
+ Summary: Experience: 23andMe · Location: Mountain View · 500+ connections on LinkedIn. View Anne Wojcicki's profile on LinkedIn, a professional community of 1 ...
+]
+
+Relevant (Y/N)? Y
+
+Result 6
+[
+ URL: https://www.biopharmadive.com/news/23andme-ceo-anne-wojcicki-pharma-drug-development/698995/
+ Title: CEO Anne Wojcicki on turning 23andMe into a 'full-fledged biotech ...
+ Summary: Nov 7, 2023 ... CEO Anne Wojcicki on turning 23andMe into a 'full-fledged biotech'. 23andMe always had larger aims than at-home genetics testing. In this in- ...
+]
+
+Relevant (Y/N)? Y
+
+Result 7
+[
+ URL: https://www.linkedin.com/posts/lloydminor_i-was-delighted-to-welcome-anne-wojcicki-activity-7243041286557999105-Mbrf
+ Title: I was delighted to welcome Anne Wojcicki, CEO of 23andMe, to The ...
+ Summary: Sep 20, 2024 ... I was delighted to welcome Anne Wojcicki, CEO of 23andMe, to The Minor Consult podcast. We explored how genetic testing can empower ...
+]
+
+Relevant (Y/N)? Y
+
+Result 8
+[
+ URL: https://www.ft.com/content/7751bc99-132c-407d-ac97-626fbb01855b
+ Title: Founder Anne Wojcicki races to rescue 23andMe
+ Summary: Oct 15, 2024 ... Wojcicki has sought to take 23andMe private. She has offered to pay just 40 cents a share — a fraction of the $10-a-share IPO price ...
+]
+
+Relevant (Y/N)? Y
+
+Result 9
+[
+ URL: https://www.23andme.com/black-lives-matter/
+ Title: Black Lives Matter - 23andMe
+ Summary: Anne Wojcicki CEO and Co-founder, 23andMe. June 2, 2020. We are observing Blackout Tuesday, a day of action against racial injustice, and will be dark on ...
+]
+
+Relevant (Y/N)? Y
+
+Result 10
+[
+ URL: https://biodesign.stanford.edu/our-impact/stories/From-the-Innovators-Workbench-Anne-Wojcicki-CEO-23andme.html
+ Title: From the Innovator's Workbench with Anne Wojcicki | Stanford ...
+ Summary: Catching up with Anne Wojcicki, CEO and co-founder, 23andMe. Anne Wojcicki spent time discussing digital health technology with the Stanford Biodesign ...
+]
+
+Relevant (Y/N)? Y
+
+FEEDBACK SUMMARY
+======================
+
+Query       = wojcicki founder 23andme
+Precision   = 1.0
+
+Desired precision reached, done
