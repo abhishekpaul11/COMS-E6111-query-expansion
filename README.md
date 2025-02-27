@@ -7,9 +7,9 @@ An Information Retrieval system based on the Google Custom Search API which disa
 
 ## Files submitted
 1. Transcripts /  --> Folder that contains all the transcript text files for the 3 given test cases
-   1. milky_way.txt --> Transcript for query "milky way"
-   2. per_se.txt  --> Transcript for query "per se"
-   3. wojcicki.txt  --> Transcript for query "wojcicki"
+   1. milky_way.txt --> Transcript for query "milky way" (intended result is Milky Way Chocolate Bar)
+   2. per_se.txt  --> Transcript for query "per se" (intended result is Per Se Michelin Star Restaurant in NYC)
+   3. wojcicki.txt  --> Transcript for query "wojcicki" (intended result is Anne Wojcicki, co-founder of 23andMe)
 2. .gitignore --> gitignore file for python projects
 3. google_search.py --> sub-routine for performing the google search
 4. LICENSE --> MIT License
@@ -30,7 +30,7 @@ or download a zip file of this repo.
 
 Once, you're in the repository in your terminal, type the following commands
 
-### Create a virtual environments
+### Create a virtual environment
 
 ```bash
 python3 -m venv venv
@@ -77,7 +77,7 @@ This is the entry point of the application.
 1. It parses the CLI arguments and performs the Google Search by calling [this](#google_searchpy) subroutine.
 2. After some pre-formatting, it displays the results to the user, with an option to mark the feedback.
 3. It captures the relevance feedback from the user and passes it to the [rocchio subroutine](#rocchiopy) to get the updated query vector and the list of all the terms in the vocabulary.
-4. This is then sent to the update query subroutine, which generates the new query and the entire process is repeated until the target precision@10
+4. This is then sent to the [update query](#update_query) subroutine, which generates the new query and the entire process is repeated until the target precision@10
 is reached.
 
 It terminates the application under these scenarios:
@@ -92,11 +92,11 @@ and returns the results with appropriate error handling.
 
 ### rocchio.py
 
-Python implementation of Rocchio's relevance feedback algorithm
+Python implementation of Rocchio's relevance feedback algorithm.
 
 #### read_stopwords()
 
-It reads the stopwords from the given [text file](stop-words.txt) and returns them as a list
+It reads the stopwords from the given [text file](stop-words.txt) and returns them as a list.
 
 #### extract_terms()
 It returns the tf-idf vector for the passed documents and the list of terms in the vocabulary.
@@ -109,7 +109,7 @@ separate tf-idf vector.
 #### rocchio_algorithm()
 
 This is called from [main.py](#mainpy) which triggers the Rocchio algorithm by converting the
-relevant docs and non-relevant docs together into a if-idf vector and a separate vector for the query terms
+relevant docs and non-relevant docs together into a tf-idf vector and a separate vector for the query terms
 by calling [extract_terms()](#extract_terms) and [transform_query()](#transform_query) respectively.
 It them calculates the relevant and non-relevant centroids and adjusts the query vector accordingly as per the 
 equation given by Rocchio to get the new query terms.
@@ -118,7 +118,7 @@ equation given by Rocchio to get the new query terms.
 #### update_query()
 
 It sorts the updated query vector by their weights in descending order and maps them to the respective query terms.
-Picks the top n terms and adds it to the original query and then sorts the entire query by weights retaining the order of the
+It then picks the top n terms and adds it to the original query and then sorts the entire query by weights retaining the order of the
 original query, and returns this new query.
 
 ## Query Expansion Method
@@ -153,15 +153,15 @@ Milky Bar instead of Milky Way. Hence, we decided to not mess up the ordering of
 
 ## External Libraries Used
 
-### requests
+### [requests](https://pypi.org/project/requests/)
 
 To perform the Search Engine API call and get the results.
 
-### scikit-learn
+### [scikit-learn](https://scikit-learn.org/stable/)
 
 To construct the tf-idf vector from the given relevant and non-relevant documents.
 
-### numpy
+### [numpy](https://numpy.org/)
 
 To calculate the mean from the tf-idf vectors to get the relevant and non-relevant centroids.
 
@@ -169,12 +169,10 @@ To calculate the mean from the tf-idf vectors to get the relevant and non-releva
 
 ### Handling of non-html files
 
-We have decided to **ignore the non-html files** in the query expansion analysis. <br>
-There is however, no change done in the 
-google search API call parameters and we are also displaying all the results (both html and non-html) to the user.<br>
-It is only during the precision@10 calculation where we are focusing only on the html files and ignoring the
+We have decided to **ignore the non-html files** in the query expansion analysis. There is however, no change done in the 
+google search API call parameters and we are also displaying all the results (both html and non-html) to the user. It is only during the precision@10 calculation where we are focusing on the html files and ignoring the
 non-html files. We're also not taking the non-html files into account in relevant or non-relevant documents, creation of the
-if-idf vector or in the query expansion algorithm.
+tf-idf vector or in the query expansion algorithm.
 
 
 ## References
